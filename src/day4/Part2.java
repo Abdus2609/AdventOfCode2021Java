@@ -14,7 +14,7 @@ public class Part2 {
     List<Integer> bingoNumbers =
         Arrays.stream(br.readLine().split(",")).map(Integer::parseInt).toList();
 
-    String line = br.readLine();
+    String line;
 
     List<BingoBoard> boards = new ArrayList<>();
 
@@ -41,7 +41,6 @@ public class Part2 {
 
     List<Integer> chosenNumbers = new ArrayList<>();
     for (int num : bingoNumbers) {
-
       chosenNumbers.add(num);
       for (int i = 0; i < boards.size(); i++) {
 
