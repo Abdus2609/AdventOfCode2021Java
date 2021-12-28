@@ -34,8 +34,6 @@ public class Part2 {
       });
     }
 
-    System.out.println(fishes);
-
     for (int i = 0; i < 256; i++) {
 
       long numZeros = fishes.get(0);
@@ -48,8 +46,6 @@ public class Part2 {
       fishes.put(6, fishes.get(6) + numZeros);
       fishes.put(8, numZeros);
     }
-
-    System.out.println(fishes);
 
     long sum = 0;
     for (int i = 0; i < 9; i++) {
