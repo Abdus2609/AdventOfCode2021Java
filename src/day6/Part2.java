@@ -12,26 +12,19 @@ public class Part2 {
   public static long partTwo(String filename) throws IOException {
     BufferedReader br = new BufferedReader(new FileReader(filename));
 
-    Map<Integer, Long> fishes = new HashMap<>();
-
-    fishes.put(0, 0L);
-    fishes.put(1, 0L);
-    fishes.put(2, 0L);
-    fishes.put(3, 0L);
-    fishes.put(4, 0L);
-    fishes.put(5, 0L);
-    fishes.put(6, 0L);
-    fishes.put(7, 0L);
-    fishes.put(8, 0L);
+    Map<Integer, Long> fishes =
+        new HashMap<>(Map.of(0, 0L, 1, 0L, 2, 0L, 3, 0L, 4, 0L, 5, 0L, 6, 0L, 7, 0L, 8, 0L));
 
     String line;
 
     while ((line = br.readLine()) != null) {
       String[] words = line.split(",");
-      Arrays.stream(words).forEach(w -> {
-        int num = Integer.parseInt(w);
-        fishes.put(num, fishes.get(num) + 1);
-      });
+      Arrays.stream(words)
+          .forEach(
+              w -> {
+                int num = Integer.parseInt(w);
+                fishes.put(num, fishes.get(num) + 1);
+              });
     }
 
     for (int i = 0; i < 256; i++) {
