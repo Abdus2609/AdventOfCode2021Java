@@ -12,7 +12,6 @@ public class Part1 {
     BufferedReader br = new BufferedReader(new FileReader(filename));
 
     List<List<Character>> rows = new ArrayList<>();
-    int sum = 0;
 
     String line;
     while ((line = br.readLine()) != null) {

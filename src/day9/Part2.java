@@ -59,12 +59,10 @@ public class Part2 {
 
     if (row < grid.length - 1 && !visited[row + 1][col]) {
       sum += getBasinSize(row + 1, col, grid, visited);
-
     }
 
     if (col > 0 && !visited[row][col - 1]) {
       sum += getBasinSize(row, col - 1, grid, visited);
-
     }
 
     if (col < grid[0].length - 1 && !visited[row][col + 1]) {
