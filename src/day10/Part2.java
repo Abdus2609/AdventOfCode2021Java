@@ -33,8 +33,6 @@ public class Part2 {
     }
 
     scores.sort(Long::compareTo);
-    System.out.println(scores);
-
     return scores.get(scores.size() / 2);
   }
 
